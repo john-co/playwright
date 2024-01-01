@@ -8,7 +8,7 @@ test('can login', async ({ page }) => {
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Home - Liferay/);
 
-  // Click on sign in link
+  // Login as super admin
   const signIn = new SignInModal(page);
   await signIn.goto();
   await signIn.signIn("test@liferay.com", "test", true);
